@@ -1,0 +1,2 @@
+# ControleDeEstoque
+TypeScript, NodeJS, Mongoose
