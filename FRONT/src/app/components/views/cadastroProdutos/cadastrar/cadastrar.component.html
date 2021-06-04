@@ -1,0 +1,18 @@
+<label for="nomeProduto">Nome do produto</label>
+<input type="text" nome="nomeProduto" [(ngModel)]="cadastroProduto.nomeProduto">
+
+
+<label >Unidade de  Med.</label>
+<select class="unidadeMed" [(ngModel)]="cadastroProduto.unidadeMed">
+    <option value="UNIDADE"> UNIDADE </option>
+    <option value="CAIXA"> CAIXA </option>
+    <option value="PACOTE"> PACOTE </option>
+</select>
+
+<label for=""></label>
+
+<br/>
+<br/>
+<button (click)="cadastrar( )">Cadastrar</button>
+<br/>
+<a routerLink=""> Listar Cadastros</a>

@@ -1,0 +1,34 @@
+<a routerLink="/cadastroProdutos/cadastrar"> Cadastrar novo produto </a>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nome Produto</th>
+            <th>#</th>
+            <th>Unidade Med.</th>
+            <th>Criado em</th>  
+            <th>Fornecedor</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <tr *ngFor= "let cadastrado of cadastros">
+            <td>
+                {{ cadastrado.nomeProduto }}
+            </td>
+            <td>
+                {{ cadastrado._id }}
+            </td>
+            <td>
+                {{ cadastrado.unidadeMed}}
+            </td>
+            <td>
+                {{ cadastrado.createdAt | date: "dd/MM/yyyy" }}
+            </td>
+            <td>
+                {{ cadastrado.nomeFornecedor }}
+            </td>
+           
+        </tr>
+    </tbody>    
+</table>
