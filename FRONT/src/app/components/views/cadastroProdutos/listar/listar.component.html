@@ -1,5 +1,9 @@
+<a routerLink=""> Home</a>
+<br>
 <a routerLink="/cadastroProdutos/cadastrar"> Cadastrar novo produto </a>
+<br>
 
+<h1>Produtos cadastrados</h1>
 <table>
     <thead>
         <tr>
@@ -7,7 +11,6 @@
             <th>#</th>
             <th>Unidade Med.</th>
             <th>Criado em</th>  
-            <th>Fornecedor</th>
         </tr>
     </thead>
     <tbody>
@@ -24,11 +27,7 @@
             </td>
             <td>
                 {{ cadastrado.createdAt | date: "dd/MM/yyyy" }}
-            </td>
-            <td>
-                {{ cadastrado.nomeFornecedor }}
-            </td>
-           
+            </td>         
         </tr>
     </tbody>    
 </table>

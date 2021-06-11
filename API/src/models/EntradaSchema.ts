@@ -4,11 +4,16 @@ import { mongoose } from "../config/database";
 
 const EntradaSchema = new Schema(
   {
-    produto: {
+    nomeProduto: {
+      type: String,
+      required: [true, "O campo PRODUTO é obrigatório!"],
+    },
+
+    /*produto: {
       type: mongoose.Schema.Types.ObjectId,
       ref : 'produto',
       require : true 
-    },
+    },*/
 
     quantidade: {
       type: Number,

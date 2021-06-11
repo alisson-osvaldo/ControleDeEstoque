@@ -20,12 +20,12 @@ class EntradaController {
   //-----------------ENTRADA PRODUTO----------------------
   //Validação: só da entrada no produto caso o produto 
   async cadastrarEntrada(request: Request, response: Response) {
-    const nomeProduto = request.body.produto; //antes era .nomeProduto
+    const nomeProduto = request.body.nomeProduto;
     const produtoEncontrado = await buscarProduto(nomeProduto);
 
     //const nomeFornecedor = request.body.nomeFornecedor;
-   // const fornecedorEncontrado = await buscarProduto(nomeFornecedor);
-    if (produtoEncontrado.lengt) {
+    //const fornecedorEncontrado = await buscarFornecedor(nomeFornecedor);
+    if ( produtoEncontrado.length ) {
       try {
         const novaEntrada = await EntradaSchema.create(request.body);
         response.status(201).json({
@@ -45,10 +45,11 @@ class EntradaController {
         .status(400)
         .json({
           message:
-            "Certifique-se de que o PRODUTO  está cadastrados",
+            "Certifique-se de que o PRODUTO está cadastrado !!!",
         });
     }
   }
+
 
   //----------------LISTAR PRODUTOS ESTOQUE------------------
   async listarEntrada(request: Request, reponse: Response) {

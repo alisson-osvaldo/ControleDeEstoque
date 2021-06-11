@@ -1,0 +1,30 @@
+<a routerLink=""> Home</a>
+<h1>Entradas</h1>
+<table>
+    <thead>
+        <tr>
+            <th> Produto </th>
+            <th> Quantidade </th>  
+            <th> Valor </th>
+            <th> Lote </th>
+        </tr> 
+    </thead>
+    <tbody>
+        <tr *ngFor= "let entradas of entradas">
+            <td>
+                {{ entradas.nomeProduto}}
+            </td>
+            <td>
+                {{ entradas.quantidade  }}
+            </td>
+            <td>
+                {{ entradas.valor }}
+            </td>
+            <td>
+                {{ entradas.lote }}
+            </td>
+        </tr>
+    </tbody>
+
+
+</table>

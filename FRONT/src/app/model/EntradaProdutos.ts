@@ -1,9 +1,9 @@
-export class CadastroProdutos {
+export class EntradaProdutos {
     _id? : string;
     createdAt? : Date;
     updatedAt? : Date;
-    produto! : String;
+    nomeProduto! : String;
     quantidade!: Number;
-    valor!: Number,
-    lote!: Number
+    valor!: Number;
+    lote!: Number;
 }
