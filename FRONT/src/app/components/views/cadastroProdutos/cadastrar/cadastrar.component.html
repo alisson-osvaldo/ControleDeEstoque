@@ -1,27 +1,33 @@
-<a routerLink=""> Home</a>
-<h1>Cadastrar Produto</h1>
-<label for="nomeProduto">Nome do produto</label>
-<input type="text" nome="nomeProduto" [(ngModel)]="cadastroProduto.nomeProduto">
-<br>
+<mat-card>
+    <mat-card-title>  Novo cadastrado de produto </mat-card-title>
+    <mat-card-content>
+        <mat-form-field>
+            <mat-label for="nomeProduto" >Nome do produto</mat-label>
+            <input matInput placeholder="Informe o nome do produto" type="text" nome="nomeProduto" [(ngModel)]="cadastroProduto.nomeProduto">
+        </mat-form-field>
+        <br>
+        <mat-form-field >
+            <mat-label > Unidade De Medida </mat-label>
+            <mat-select class="unidadeMed" [(ngModel)]="cadastroProduto.unidadeMed">
+              <mat-option value="UNIDADE"> UNIDADE </mat-option>
+              <mat-option value="CAIXA"> CAIXA </mat-option>
+              <mat-option value="PACOTE"> PACOTE </mat-option>
+            </mat-select>
+        </mat-form-field>
 
-<label >Unidade de  Med.</label>
-<select class="unidadeMed" [(ngModel)]="cadastroProduto.unidadeMed">
-    <option value="UNIDADE"> UNIDADE </option>
-    <option value="CAIXA"> CAIXA </option>
-    <option value="PACOTE"> PACOTE </option>
-</select>
+        <!--Cadastro do Fornecedor-->
+        <!--
+        <label for="nomeFornecedor"> Nome do Fornecedor</label>
+        <input type="text" nome="nomeFornecedor" [(ngModel)]="cadastroProduto.nomeFornecedor">
+        -->
 
-<br>
-<br>
+        <br/> <br/>
 
-<!--Cadastro do Fornecedor-->
-<!--
-<label for="nomeFornecedor"> Nome do Fornecedor</label>
-<input type="text" nome="nomeFornecedor" [(ngModel)]="cadastroProduto.nomeFornecedor">
--->
+        <button mat-raised-button color="primary" (click)="cadastrar( )"> Cadastrar </button>
+        <br><br>
+        <a mat-stroked-button color="warn" routerLink="/controle/listar/produto"> Produtos cadastrados </a>
+        <br/>
+    </mat-card-content>
+</mat-card>
 
-<br/>
-<br/>
-<button (click)="cadastrar( )">Cadastrar</button>
-<br/>
 

@@ -1,13 +1,31 @@
-<a routerLink=""> Home</a>
-<h1> Cadastrar Entrada </h1>
-<label for="nomeProduto"> Nome do produto </label>
-<input type="text" nome="nomeProduto" [(ngModel)]="entradaProduto.nomeProduto">
-<br>
-<label for="quantidade"> Quantidade </label>
-<input type="number" nome="quantidade" [(ngModel)]="entradaProduto.quantidade">
-<br>
-<label for="valor"> Valor </label>
-<input type="number" nome="valor" [(ngModel)]="entradaProduto.valor">
-<br>
-<label for="lote"> Lote </label>
-<input type="number" nome="lote" [(ngModel)]="entradaProduto.lote">
+<mat-card>
+    <mat-card-title>  Nova Entrada </mat-card-title>
+    <mat-card-content>
+        <mat-form-field >
+            <mat-label for="nomeProduto"> Nome do produto </mat-label>
+            <input matInput placeholder="Informe o nome do produto" type="text" nome="nomeProduto" [(ngModel)]="entradaProduto.nomeProduto">    
+        </mat-form-field>
+        <br>
+        <mat-form-field >
+            <mat-label for="quantidade"> Quantidade </mat-label>
+            <input  matInput placeholder="Informe a quantidade" type="number" nome="quantidade" [(ngModel)]="entradaProduto.quantidade">
+        </mat-form-field>
+        <br>
+        <mat-form-field >
+            <mat-label for="valor"> Valor </mat-label>
+            <input matInput placeholder="Informe o valor" type="number" nome="valor" [(ngModel)]="entradaProduto.valor">
+        </mat-form-field>
+        <br>
+        <mat-form-field >
+            <mat-label for="lote"> Lote </mat-label>
+            <input matInput placeholder="Informe o número do lote" type="number" nome="lote" [(ngModel)]="entradaProduto.lote">
+         </mat-form-field>
+         <br><br>
+
+         <button mat-raised-button color="primary" (click)="cadastrar( )"> Cadastrar </button>
+        <br><br>
+        <a mat-stroked-button color="warn" routerLink="/controle/listar/entrada"> Produtos em estoque </a>
+        <br/>
+
+    </mat-card-content>
+</mat-card>
