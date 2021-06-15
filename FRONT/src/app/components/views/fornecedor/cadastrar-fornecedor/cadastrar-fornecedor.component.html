@@ -1,0 +1,31 @@
+<mat-card>
+    <mat-card-title>  Cadastrar Fornecedor </mat-card-title>
+    <mat-card-content>
+        <mat-form-field>
+            <mat-label for="nomeFornecedor" >Nome </mat-label>
+            <input matInput placeholder="Informe o nome do fornecedor" type="text" nome="nomeFornecedor" [(ngModel)]="fornecedores.nomeFornecedor">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label for="cnpjFornecedor" >CNPJ </mat-label>
+            <input matInput placeholder="Informe o cnpj do fornecedor" type="text" nome="cnpjFornecedor" [(ngModel)]="fornecedores.cnpjFornecedor">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label for="telFornecedor" >Telefone </mat-label>
+            <input matInput placeholder="Informe o Telefone do fornecedor" type="text" nome="telefoneFornecedor" [(ngModel)]="fornecedores.telFornecedor">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label for="emailFornecedor" >E-mail </mat-label>
+            <input matInput placeholder="Informe o e-mail do fornecedor" type="text" nome="emailFornecedor" [(ngModel)]="fornecedores.emailFornecedor">
+        </mat-form-field>
+
+        <br><br>
+
+        <button mat-raised-button color="primary" (click)="cadastrar( )"> Cadastrar </button>
+        <br><br>
+       
+
+    </mat-card-content>
+</mat-card>

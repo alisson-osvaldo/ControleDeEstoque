@@ -13,8 +13,7 @@ export class CadastrarProdutosService {
   constructor(private http: HttpClient) { }
 
   listar( ): Observable<CadastroProdutos[ ]>{
-    return this.http.get<CadastroProdutos[ ]>(`${this.baseURL}controle/listar/produto
-    `)
+    return this.http.get<CadastroProdutos[ ]>(`${this.baseURL}controle/listar/produto`)
   }
 
   cadastrar(cadastrarProdutos: CadastroProdutos): Observable<CadastroProdutos>{

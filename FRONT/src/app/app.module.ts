@@ -24,6 +24,8 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './components/views/home/home.component';
 import { BuscarComponent } from './components/views/cadastroProdutos/buscar/buscar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CadastrarFornecedorComponent } from './components/views/fornecedor/cadastrar-fornecedor/cadastrar-fornecedor.component';
+
 
 
 
@@ -38,6 +40,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CadastrarEntradaComponent,
     HomeComponent,
     BuscarComponent,
+    CadastrarFornecedorComponent
+ 
     
     
   ],

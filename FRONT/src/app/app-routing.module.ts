@@ -6,12 +6,13 @@ import { ListarComponent } from './components/views/cadastroProdutos/listar/list
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastrarEntradaComponent } from './components/views/entrada/cadastrar-entrada/cadastrar-entrada.component';
+import { CadastrarFornecedorComponent } from './components/views/fornecedor/cadastrar-fornecedor/cadastrar-fornecedor.component';
 
 
 const routes: Routes = [
   //CadastroProsutos
   {
-    path : '',
+    path : 'controle/cadastrar/produto',
     component : HomeComponent
   },
   {
@@ -22,10 +23,6 @@ const routes: Routes = [
     path : 'cadastroProdutos/cadastrar',
     component : CadastrarComponent
   },
-  {
-    path : 'controle/cadastrar/fornecedor',
-    component : CadastrarComponent
-  },
   //EntradaProdutos
   {
     path : 'controle/listar/entrada',
@@ -33,8 +30,13 @@ const routes: Routes = [
   },
   {
     path : 'controle/cadastrar/entrada',
-    component :CadastrarEntradaComponent
-  }
+    component : CadastrarEntradaComponent
+  },
+  //Fornecedor
+{
+  path : 'controle/cadastrar/fornecedor',
+  component : CadastrarFornecedorComponent
+}
 
   
 ];
