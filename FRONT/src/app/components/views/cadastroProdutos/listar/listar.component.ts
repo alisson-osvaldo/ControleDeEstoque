@@ -11,9 +11,7 @@ export class ListarComponent implements OnInit {
 
   cadastros : CadastroProdutos[] = [];
 
-  constructor(private service: CadastrarProdutosService) { 
-    
-  }
+  constructor(private service: CadastrarProdutosService) { }
 
   ngOnInit(): void {
     this.service.listar( ).subscribe((produtosCadastrados) => {

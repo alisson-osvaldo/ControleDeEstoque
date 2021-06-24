@@ -1,33 +1,85 @@
 <mat-card>
     <mat-card-title>  Novo cadastrado de produto </mat-card-title>
     <mat-card-content>
+        <mat-form-field >
+            <mat-label for="data">Data do Ciclo</mat-label>
+            <input matInput placeholder="Digite a data do ciclo" type="month" name="data" [(ngModel)]="data" />
+          </mat-form-field>
+          <br>
         <mat-form-field>
             <mat-label for="nomeProduto" >Nome do produto</mat-label>
-            <input matInput placeholder="Informe o nome do produto" type="text" nome="nomeProduto" [(ngModel)]="cadastroProduto.nomeProduto">
+            <input matInput placeholder="Informe o nome do produto" type="text" nome="nomeProduto" [(ngModel)]="nomeProduto">
         </mat-form-field>
         <br>
         <mat-form-field >
             <mat-label > Unidade De Medida </mat-label>
-            <mat-select class="unidadeMed" [(ngModel)]="cadastroProduto.unidadeMed">
-              <mat-option value="UNIDADE"> UNIDADE </mat-option>
-              <mat-option value="CAIXA"> CAIXA </mat-option>
-              <mat-option value="PACOTE"> PACOTE </mat-option>
+            <mat-select class="unidadeMed" [(ngModel)]="unidadeMed">
+            <mat-option value="UNIDADE"> UNIDADE </mat-option>
+            <mat-option value="CAIXA"> CAIXA </mat-option>
+            <mat-option value="PACOTE"> PACOTE </mat-option>
             </mat-select>
         </mat-form-field>
 
-        <!--Cadastro do Fornecedor-->
-        <!--
-        <label for="nomeFornecedor"> Nome do Fornecedor</label>
-        <input type="text" nome="nomeFornecedor" [(ngModel)]="cadastroProduto.nomeFornecedor">
-        -->
-
         <br/> <br/>
+        
+        <div>
+            <mat-card>
+                <mat-card-title> Adicionar Fornecedor </mat-card-title>
+                <mat-card-content>
+                    <mat-form-field>
+                        <mat-label for="nomeFornecedor" >Nome </mat-label>
+                        <input matInput placeholder="Informe o nome do fornecedor" type="text" nome="nomeFornecedor" [(ngModel)]="nomeFornecedor">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                        <mat-label for="cnpjFornecedor" >CNPJ </mat-label>
+                        <input matInput placeholder="Informe o cnpj do fornecedor" type="text" nome="cnpjFornecedor" [(ngModel)]="cnpjFornecedor">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                        <mat-label for="telFornecedor" >Telefone </mat-label>
+                        <input matInput placeholder="Informe o Telefone do fornecedor" type="text" nome="telefoneFornecedor" [(ngModel)]="telFornecedor">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                        <mat-label for="emailFornecedor" >E-mail </mat-label>
+                        <input matInput placeholder="Informe o e-mail do fornecedor" type="text" nome="emailFornecedor" [(ngModel)]="emailFornecedor">
+                    </mat-form-field>
+                    <button mat-raised-button color="primary" (click)="adicionarFornecedor()">Adicionar Fornecedor</button>
+                    
+                    <table mat-table [dataSource]="fornecedores" class="mat-elevation-z8">
+                        <ng-container matColumnDef="nomeFornecedor">
+                            <th mat-header-cell *matHeaderCellDef> Nome </th>
+                            <td mat-cell *matCellDef="let fornecedores"> {{fornecedores.nomeFornecedor}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="cnpjFornecedor">
+                            <th mat-header-cell *matHeaderCellDef> CNPJ </th>
+                            <td mat-cell *matCellDef="let fornecedores"> {{fornecedores.cnpjFornecedor}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="telFornecedor">
+                            <th mat-header-cell *matHeaderCellDef> Telefone </th>
+                            <td mat-cell *matCellDef="let fornecedores"> {{fornecedores.telFornecedor}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="emailFornecedor">
+                            <th mat-header-cell *matHeaderCellDef> E-mail </th>
+                            <td mat-cell *matCellDef="let fornecedores"> {{fornecedores.emailFornecedor}} </td>
+                        </ng-container>
+
+                        <tr mat-header-row *matHeaderRowDef="colunasFornecedor"></tr>
+                        <tr mat-row *matRowDef="let row; columns: colunasFornecedor;"></tr>
+                    </table>
+                </mat-card-content>
+            </mat-card>
+        </div>
+
+        
+
 
         <button mat-raised-button color="primary" (click)="cadastrar( )"> Cadastrar </button>
-        <br><br>
+         <br><br>
         <a mat-stroked-button color="warn" routerLink="/controle/listar/produto"> Produtos cadastrados </a>
-        <br/>
-    </mat-card-content>
+                
+    </mat-card-content> 
 </mat-card>
 
 

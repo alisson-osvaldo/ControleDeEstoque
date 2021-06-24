@@ -6,11 +6,12 @@ POST  http://localhost:3000/controle/cadastrar/produto
 Content-Type: application/json
 
 {
-    "nomeProduto": "SOM",
+     "data": "2021/04/12",
+    "nomeProduto": "maquinasdf",
     "unidadeMed" : "CAIXA",
    "fornecedores" : [
      {
-        "nomeFornecedor": "Pedro",
+        "nomeFornecedor": "jack",
         "cnpjFornecedor": "1234",
         "telFornecedor": "707070",
         "emailFornecedor": "@test.com"

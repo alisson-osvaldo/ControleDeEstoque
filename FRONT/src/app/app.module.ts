@@ -11,7 +11,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSelectModule} from '@angular/material/select';
-
+import { MatTableModule } from '@angular/material/table';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { AppComponent } from './app.component';
 import { ListarComponent } from './components/views/cadastroProdutos/listar/listar.component';
@@ -25,6 +27,7 @@ import { HomeComponent } from './components/views/home/home.component';
 import { BuscarComponent } from './components/views/cadastroProdutos/buscar/buscar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CadastrarFornecedorComponent } from './components/views/fornecedor/cadastrar-fornecedor/cadastrar-fornecedor.component';
+import { ListarFornecedorComponent } from './components/views/fornecedor/listar-fornecedor/listar-fornecedor.component';
 
 
 
@@ -40,8 +43,8 @@ import { CadastrarFornecedorComponent } from './components/views/fornecedor/cada
     CadastrarEntradaComponent,
     HomeComponent,
     BuscarComponent,
-    CadastrarFornecedorComponent
- 
+    CadastrarFornecedorComponent,
+    ListarFornecedorComponent
     
     
   ],
@@ -59,7 +62,10 @@ import { CadastrarFornecedorComponent } from './components/views/fornecedor/cada
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatSelectModule
+    MatSelectModule,
+    MatTableModule,
+    MatGridListModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

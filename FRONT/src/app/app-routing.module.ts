@@ -7,14 +7,16 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastrarEntradaComponent } from './components/views/entrada/cadastrar-entrada/cadastrar-entrada.component';
 import { CadastrarFornecedorComponent } from './components/views/fornecedor/cadastrar-fornecedor/cadastrar-fornecedor.component';
+import { ListarFornecedorComponent } from './components/views/fornecedor/listar-fornecedor/listar-fornecedor.component';
 
 
 const routes: Routes = [
-  //CadastroProsutos
+  //Home
   {
-    path : 'controle/cadastrar/produto',
+    path: '',
     component : HomeComponent
   },
+  //CadastroProsutos
   {
     path:'controle/listar/produto',
     component : ListarComponent
@@ -36,6 +38,10 @@ const routes: Routes = [
 {
   path : 'controle/cadastrar/fornecedor',
   component : CadastrarFornecedorComponent
+},
+{
+  path : 'controle/listar/fornecedor',
+  component : ListarFornecedorComponent
 }
 
   

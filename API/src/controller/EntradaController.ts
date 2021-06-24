@@ -3,7 +3,7 @@
 import { Router, Request, Response } from "express";
 import EntradaSchema from "../models/EntradaSchema";
 import ProdutoSchema from "../models/ProdutoSchema";
-import {fornecedorSchema} from "../models/FornecedorSchema";
+//import {fornecedorSchema} from "../models/FornecedorSchema";
 
 //--------FUNÇÕES DE BUSCAR PRODUTO e FORNECEDOR -------------
 async function buscarProduto(nomeProduto: string) {
