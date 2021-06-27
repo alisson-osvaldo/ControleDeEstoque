@@ -6,6 +6,7 @@
                 <th>Nome </th>
                 <th>Unidade Med.</th>
                 <th>Criado em</th>  
+                <th>Alterar | Excluir</th>
             </tr>
         </thead>
         <tbody>
@@ -20,6 +21,18 @@
                 <td>
                     {{ cadastrado.createdAt | date: "dd/MM/yyyy" }}
                 </td>         
+                <td class="row">
+                    <a routerLink="/cadastroProdutos/atualizar/{{ cadastrado._id }}" class="edit">
+                        <i class="material-icons">
+                            edit
+                        </i>
+                    </a>
+                    <a routerLink="" class="delete">
+                        <i class="material-icons">
+                            delete
+                        </i>
+                    </a>
+                </td>
             </tr>
         </tbody>    
     </table>

@@ -32,7 +32,7 @@ unidadeMed! : String;
 
   ngOnInit(): void {}
 
-  cadastrar( ): void{
+  cadastrar(): void{
     let cadastroProdutos = new CadastroProdutos();
     cadastroProdutos.data = new Date(this.data);
     

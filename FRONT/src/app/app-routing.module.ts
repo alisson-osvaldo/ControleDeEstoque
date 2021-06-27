@@ -8,6 +8,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CadastrarEntradaComponent } from './components/views/entrada/cadastrar-entrada/cadastrar-entrada.component';
 import { CadastrarFornecedorComponent } from './components/views/fornecedor/cadastrar-fornecedor/cadastrar-fornecedor.component';
 import { ListarFornecedorComponent } from './components/views/fornecedor/listar-fornecedor/listar-fornecedor.component';
+import { ProductUpdateComponent } from './components/views/cadastroProdutos/product-update/product-update.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,11 @@ const routes: Routes = [
     path : 'cadastroProdutos/cadastrar',
     component : CadastrarComponent
   },
+  {
+    path : 'cadastroProdutos/atualizar/:_id',
+    component : ProductUpdateComponent
+  },
+
   //EntradaProdutos
   {
     path : 'controle/listar/entrada',
