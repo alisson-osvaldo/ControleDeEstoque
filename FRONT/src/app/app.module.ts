@@ -28,6 +28,7 @@ import { BuscarComponent } from './components/views/cadastroProdutos/buscar/busc
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CadastrarFornecedorComponent } from './components/views/fornecedor/cadastrar-fornecedor/cadastrar-fornecedor.component';
 import { ListarFornecedorComponent } from './components/views/fornecedor/listar-fornecedor/listar-fornecedor.component';
+import { FooterComponent } from './components/template/footer/footer.component';
 
 
 
@@ -44,7 +45,8 @@ import { ListarFornecedorComponent } from './components/views/fornecedor/listar-
     HomeComponent,
     BuscarComponent,
     CadastrarFornecedorComponent,
-    ListarFornecedorComponent
+    ListarFornecedorComponent,
+    FooterComponent,
     
     
   ],
