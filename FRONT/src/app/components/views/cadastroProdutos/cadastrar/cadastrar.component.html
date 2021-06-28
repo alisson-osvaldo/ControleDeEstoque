@@ -27,8 +27,8 @@
     <mat-form-field>
       <mat-label> Fornecedor </mat-label>
       <mat-select [(ngModel)]="fornecedor">
-        <mat-option *ngFor="let forn of fornecedores" [value]="forn.cnpj"  >
-          {{ forn.cnpj }}
+        <mat-option *ngFor="let forn of fornecedores" [value]="forn.nomeFornecedor"  >
+          {{ forn.nomeFornecedor }}
         </mat-option>
       </mat-select>
     </mat-form-field>

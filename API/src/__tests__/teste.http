@@ -7,7 +7,7 @@ Content-Type: application/json
 
 {
     "cnpj" : 123,
-    "nomeProduto": "teclado4",
+    "nomeProduto": "teclado5",
     "unidadeMed" : "CAIXA"
 }
 

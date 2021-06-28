@@ -1,6 +1,7 @@
 import { FornecedorService } from "./../../../../services/Fornecedor.service";
 import { Component, OnInit } from "@angular/core";
 import { Fornecedor } from "src/app/model/Fornecedor";
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: "app-listar-fornecedor",
@@ -9,6 +10,9 @@ import { Fornecedor } from "src/app/model/Fornecedor";
 })
 export class ListarFornecedorComponent implements OnInit {
   fornecedores: Fornecedor[] = [];
+
+  _fornecedores!: MatTableDataSource<Fornecedor>;
+  displayedColumns: string[] = ['nomeFornecedor', 'cnpj', 'telFornecedor', 'emailFornecedor'];
 
   constructor(private service: FornecedorService) {}
 

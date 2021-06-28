@@ -23,7 +23,6 @@ import { CadastrarEntradaComponent } from './components/views/entrada/cadastrar-
 import { HeaderComponent } from './components/template/header/header.component';
 import { ContentComponent } from './components/template/content/content.component';
 import { FormsModule } from '@angular/forms';
-import { BuscarComponent } from './components/views/cadastroProdutos/buscar/buscar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CadastrarFornecedorComponent } from './components/views/fornecedor/cadastrar-fornecedor/cadastrar-fornecedor.component';
 import { ListarFornecedorComponent } from './components/views/fornecedor/listar-fornecedor/listar-fornecedor.component';
@@ -45,7 +44,6 @@ import { FooterComponent } from './components/template/footer/footer.component';
     ContentComponent,
     ListarEntradaComponent,
     CadastrarEntradaComponent,
-    BuscarComponent,
     CadastrarFornecedorComponent,
     ListarFornecedorComponent,
     AtualizarProdutoComponent,

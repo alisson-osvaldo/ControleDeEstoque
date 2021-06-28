@@ -21,7 +21,7 @@ export class DeletarCadastroComponent implements OnInit {
     console.log(this.deletar);
     this.service.deletar(nomeProduto).subscribe((nomeProduto) => {
       console.log(nomeProduto);
-      this.snack.open("Cadastro de produto deletado ", "Cadastro de Produtos",{
+      this.snack.open("Cadastro deletado ", "Cadastro de Produtos",{
         duration: 3000,
         horizontalPosition: "right",
         verticalPosition: "top",
