@@ -1,12 +1,8 @@
 .footer{
     position: fixed;
     bottom: 0;
-<<<<<<< HEAD
     background-color: #a6abcc;
    
-=======
-    background-color: #3f51b5;
->>>>>>> b4e2887f5a86728f8a57c6c0c7141114afb7fc0a
 
     display: flex;
     justify-content: flex-end;
@@ -15,9 +11,5 @@
 .footer span{
     font-size: 1rem;
     font-weight: 300;
-<<<<<<< HEAD
     color: #000000;
-=======
-    color: azure;
->>>>>>> b4e2887f5a86728f8a57c6c0c7141114afb7fc0a
 }

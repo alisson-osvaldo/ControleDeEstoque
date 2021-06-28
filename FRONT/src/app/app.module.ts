@@ -27,16 +27,11 @@ import { BuscarComponent } from './components/views/cadastroProdutos/buscar/busc
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CadastrarFornecedorComponent } from './components/views/fornecedor/cadastrar-fornecedor/cadastrar-fornecedor.component';
 import { ListarFornecedorComponent } from './components/views/fornecedor/listar-fornecedor/listar-fornecedor.component';
-<<<<<<< HEAD
 import { AtualizarProdutoComponent } from './components/views/cadastroProdutos/atualizar-produto/atualizar-produto.component';
 import { DeletarFornecedorComponent } from './components/views/fornecedor/deletar-fornecedor/deletar-fornecedor.component';
 import { DeletarCadastroComponent } from './components/views/cadastroProdutos/deletar-cadastro/deletar-cadastro.component';
 import { DeletarEntradaComponent } from './components/views/entrada/deletar-entrada/deletar-entrada.component';
 import { FooterComponent } from './components/template/footer/footer.component';
-=======
-import { FooterComponent } from './components/template/footer/footer.component';
-import { ProductUpdateComponent } from './components/views/cadastroProdutos/product-update/product-update.component';
->>>>>>> b4e2887f5a86728f8a57c6c0c7141114afb7fc0a
 
 
 
@@ -53,16 +48,11 @@ import { ProductUpdateComponent } from './components/views/cadastroProdutos/prod
     BuscarComponent,
     CadastrarFornecedorComponent,
     ListarFornecedorComponent,
-<<<<<<< HEAD
     AtualizarProdutoComponent,
     DeletarFornecedorComponent,
     DeletarCadastroComponent,
     DeletarEntradaComponent,
     FooterComponent
-=======
-    FooterComponent,
-    ProductUpdateComponent,
->>>>>>> b4e2887f5a86728f8a57c6c0c7141114afb7fc0a
     
     
   ],

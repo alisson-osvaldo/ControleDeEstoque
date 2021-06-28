@@ -41,27 +41,9 @@ export class CadastrarProdutosService {
     return this.http.put<CadastroProdutos>(`${this.baseURL}/${cadastroProdutos._id}`, cadastroProdutos);
   }
 
-<<<<<<< HEAD
 
   deletar(nomeProduto: string): Observable<CadastroProdutos> {
     return this.http.delete<CadastroProdutos>(`${this.baseURL}controle/produto/deletar/${nomeProduto}` );
-=======
-  cadastrar(cadastrarProdutos: CadastroProdutos): Observable<CadastroProdutos>{
-    return this.http.post<CadastroProdutos>(`${this.baseURL}controle/cadastrar/produto`,cadastrarProdutos )
-    
-  }
-
-  readById(_id : string): Observable<CadastroProdutos>{
-    const url = `${this.baseURL}/${_id}`
-    return this.http.get<CadastroProdutos>(url)
-  }
-
-  update(cadastrarProdutos : CadastroProdutos) : Observable<CadastroProdutos>{
-    const url = `${this.baseURL}/${cadastrarProdutos._id}`
-
-    return this.http.put<CadastroProdutos>(url, cadastrarProdutos)
-    
->>>>>>> b4e2887f5a86728f8a57c6c0c7141114afb7fc0a
   }
 
 

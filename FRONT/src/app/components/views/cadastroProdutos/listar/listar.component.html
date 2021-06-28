@@ -1,5 +1,4 @@
 <mat-card>
-<<<<<<< HEAD
   <a mat-raised-button color="primary" routerLink="/cadastroProdutos/cadastrar">
     <mat-icon>event</mat-icon>
     Cadastrar Novo Produto
@@ -46,43 +45,4 @@
       </tr>
     </tbody>
   </table>
-=======
-    <mat-card-title>  Produtos Cadastrados </mat-card-title>
-    <table >
-        <thead>
-            <tr>
-                <th>Nome </th>
-                <th>Unidade Med.</th>
-                <th>Criado em</th>  
-                <th>Alterar | Excluir</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <tr *ngFor= "let cadastrado of cadastros">
-                <td>
-                    {{ cadastrado.nomeProduto }}
-                </td>
-                <td>
-                    {{ cadastrado.unidadeMed}}
-                </td>
-                <td>
-                    {{ cadastrado.createdAt | date: "dd/MM/yyyy" }}
-                </td>         
-                <td class="row">
-                    <a routerLink="/cadastroProdutos/atualizar/{{ cadastrado._id }}" class="edit">
-                        <i class="material-icons">
-                            edit
-                        </i>
-                    </a>
-                    <a routerLink="" class="delete">
-                        <i class="material-icons">
-                            delete
-                        </i>
-                    </a>
-                </td>
-            </tr>
-        </tbody>    
-    </table>
->>>>>>> b4e2887f5a86728f8a57c6c0c7141114afb7fc0a
 </mat-card>

@@ -32,12 +32,8 @@ export class CadastrarComponent implements OnInit {
     });
   }
 
-<<<<<<< HEAD
   cadastrar(): void {
     console.log(this.fornecedor);
-=======
-  cadastrar(): void{
->>>>>>> b4e2887f5a86728f8a57c6c0c7141114afb7fc0a
     let cadastroProdutos = new CadastroProdutos();
     cadastroProdutos.fornecedor = this.fornecedor;
     // cadastroProdutos.fornecedores = this.fornecedores.data;
@@ -47,38 +43,12 @@ export class CadastrarComponent implements OnInit {
     this.unidadeMed = "";
     this.service.cadastrar(cadastroProdutos).subscribe((cadastroProdutos) => {
       console.log(cadastroProdutos);
-<<<<<<< HEAD
       this.snack.open("Novo produto cadastrado", "CadastroProduto", {
         duration: 3000,
-=======
-      this.snack.open("Novo produto cadastrado", "X", {
-        duration:3000,
->>>>>>> b4e2887f5a86728f8a57c6c0c7141114afb7fc0a
         horizontalPosition: "right",
         verticalPosition: "top",
       });
       this.router.navigate([""]);
     });
   }
-<<<<<<< HEAD
-=======
-
-   
-    adicionarFornecedor(): void {
-      /*console.log( this.nomeFornecedor, this.cnpjFornecedor, this.telFornecedor, this.emailFornecedor);*/
-     let fornecedor = new Fornecedor();
-      fornecedor.nomeFornecedor = this.nomeFornecedor;
-      fornecedor.cnpjFornecedor = this.cnpjFornecedor;
-      fornecedor.telFornecedor = this.telFornecedor;
-      fornecedor.emailFornecedor = this.emailFornecedor;
-      this.fornecedores.data.push(fornecedor);
-      this.fornecedores._updateChangeSubscription();
-      this.nomeFornecedor = "";
-      this.cnpjFornecedor = "";
-      this.telFornecedor = "";
-      this.emailFornecedor = "";
-    }
-
-
->>>>>>> b4e2887f5a86728f8a57c6c0c7141114afb7fc0a
 }
