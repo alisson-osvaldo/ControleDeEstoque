@@ -43,7 +43,7 @@ unidadeMed! : String;
     this.unidadeMed = "";
     this.service.cadastrar(cadastroProdutos).subscribe((cadastroProdutos) => {
       console.log(cadastroProdutos);
-      this.snack.open("Novo produto cadastrado", "CadastroProduto", {
+      this.snack.open("Novo produto cadastrado", "X", {
         duration:3000,
         horizontalPosition: "right",
         verticalPosition: "top",
@@ -53,7 +53,7 @@ unidadeMed! : String;
   }
 
    
-    adicionarFornecedor( ): void {
+    adicionarFornecedor(): void {
       /*console.log( this.nomeFornecedor, this.cnpjFornecedor, this.telFornecedor, this.emailFornecedor);*/
      let fornecedor = new Fornecedor();
       fornecedor.nomeFornecedor = this.nomeFornecedor;
