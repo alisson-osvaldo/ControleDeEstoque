@@ -1,0 +1,24 @@
+a{
+    text-decoration: none;
+}
+
+.home .title{
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.home .subtitle{
+    font-size: 1.1rem;
+}
+
+a:link, a:active, a:visited{
+	color: #0853b4;
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: none;
+	color: #27129c;
+    font-weight: 500;
+}

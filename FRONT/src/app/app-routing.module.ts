@@ -8,9 +8,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { CadastrarEntradaComponent } from './components/views/entrada/cadastrar-entrada/cadastrar-entrada.component';
 import { CadastrarFornecedorComponent } from './components/views/fornecedor/cadastrar-fornecedor/cadastrar-fornecedor.component';
 import { ListarFornecedorComponent } from './components/views/fornecedor/listar-fornecedor/listar-fornecedor.component';
+<<<<<<< HEAD
 import { DeletarCadastroComponent } from './components/views/cadastroProdutos/deletar-cadastro/deletar-cadastro.component';
 import { EntradaProdutos } from './model/EntradaProdutos';
 import { DeletarEntradaComponent } from './components/views/entrada/deletar-entrada/deletar-entrada.component';
+=======
+import { ProductUpdateComponent } from './components/views/cadastroProdutos/product-update/product-update.component';
+>>>>>>> b4e2887f5a86728f8a57c6c0c7141114afb7fc0a
 
 
 const routes: Routes = [
@@ -29,6 +33,7 @@ const routes: Routes = [
     component : CadastrarComponent
   },
   {
+<<<<<<< HEAD
     path : 'controle/alterar/produto/:id',
     component : AtualizarProdutoComponent
   },
@@ -37,6 +42,13 @@ const routes: Routes = [
     component : DeletarCadastroComponent
   },
   //EntradaProdutos----------------------------------------------------------------------
+=======
+    path : 'cadastroProdutos/atualizar/:_id',
+    component : ProductUpdateComponent
+  },
+
+  //EntradaProdutos
+>>>>>>> b4e2887f5a86728f8a57c6c0c7141114afb7fc0a
   {
     path : 'controle/listar/entrada',
     component : ListarEntradaComponent
