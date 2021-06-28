@@ -1,0 +1,14 @@
+<mat-card>
+    <mat-card-title> Deletar Cadastro De Produto </mat-card-title>
+    <mat-card-content>
+      
+      <mat-form-field >
+        <mat-label for="nomeProduto">Nome Do Produto</mat-label>
+        <input matInput placeholder="Informe o nome do cadastrado" type="string" name="nomeProduto" [(ngModel)]="nomeProduto"/>
+      </mat-form-field>
+      <mat-card-actions>
+        <button mat-raised-button color="warn" (click)="deletar(nomeProduto)">Deletar</button>
+        <a mat-stroked-button routerLink="/controle/listar/produto"> Listar </a>
+      </mat-card-actions>
+    </mat-card-content>
+  </mat-card>

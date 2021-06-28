@@ -1,4 +1,11 @@
 <mat-card>
+    <a mat-raised-button color="primary" routerLink="/controle/cadastrar/entrada">
+        <mat-icon>event</mat-icon>
+        Cadastrar Novo Produto
+    </a>
+
+    <br><br>
+
     <mat-card-title>  Produtos Em Estoque </mat-card-title>
     <table>
         <thead>
@@ -22,6 +29,11 @@
                 </td>
                 <td>
                     {{ entradas.lote }}
+                </td>
+                <td class="row">
+                    <a class="delete"  routerLink="/controle/deletar/estoque/{{ entradas.nomeProduto }}" >
+                      <i class="material-icons"> delete </i>
+                    </a>
                 </td>
             </tr>
         </tbody>

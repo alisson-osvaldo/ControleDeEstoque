@@ -1,4 +1,5 @@
 import ProdutoSchema from "../models/ProdutoSchema";
+import FornecedorSchema from "../models/FornecedorSchema";
 import { Request, Response } from "express";
 
 //--------FUNÇÕES DE BUSCAR PRODUTO -------------
@@ -16,6 +17,12 @@ class CadastroController{
       response.status(400).json({ message: "Produto existente!" });
     } else {
       try {
+        const { cnpj } = request.body;
+        const fornecedor = await FornecedorSchema.findOne({cnpj: cnpj});
+
+        const dadosFornecedor = request.body;
+        dadosFornecedor.fornecedor = fornecedor;
+
         const novoProduto = await ProdutoSchema.create(request.body);
         response.status(201).json({
           objeto: novoProduto,
@@ -31,6 +38,7 @@ class CadastroController{
       }
     }
   }
+
 
   //--------------------LISTAR CADASTRO PRODUTO-------------------------------------
   async listarProduto(request: Request, reponse: Response) {
@@ -48,8 +56,8 @@ class CadastroController{
   //-------------------DELETAR CADASTRO DE PRODUTO-----------------------------------
   async deletarProduto(request: Request, response: Response) {
     try {
-      const { id } = request.params;
-      const produto = await ProdutoSchema.deleteOne({ nomeProduto: id });
+      const { nomeProduto } = request.params;
+      const produto = await ProdutoSchema.deleteOne({ nomeProduto: nomeProduto });
 
       response
         .status(201)

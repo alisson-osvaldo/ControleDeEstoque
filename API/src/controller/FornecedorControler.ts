@@ -3,8 +3,8 @@ import FornecedorSchema from "../models/FornecedorSchema";
 
 
 //--------FUNÇÕES DE BUSCAR PRODUTO E FORNECEDOR-------------
-async function buscarFornecedor(nomeFornecedor: string) {
-    const fornecedor = await FornecedorSchema.find({ nomeFornecedor });
+async function buscarFornecedor(cnpj: string) {
+    const fornecedor = await FornecedorSchema.find({ cnpj });
     return fornecedor;
   }
 
@@ -12,8 +12,8 @@ class FornecedorController{
 
 //--------------------CADASTRAR FORNECEDOR-----------------------------
 async cadastrarFornecedor(request: Request, response: Response) {
-    const nomeFornecedor = request.body.nomeFornecedor;
-    const fornecedorEncontrado = await buscarFornecedor(nomeFornecedor);
+    const cnpj = request.body.cnpj;
+    const fornecedorEncontrado = await buscarFornecedor(cnpj);
     if (fornecedorEncontrado.length) {
       response.status(400).json({ message: "Fornecedor já existe!" });
     } else {
@@ -42,17 +42,17 @@ async cadastrarFornecedor(request: Request, response: Response) {
 
   //--------------------BUSCAR FORNECEDOR----------------------------
   async buscarFornecedor(request: Request, response: Response) {
-      const { nomeFornecedor } = request.params;
-      const fornecedor = await buscarFornecedor(nomeFornecedor);
+      const { cnpj } = request.params;
+      const fornecedor = await buscarFornecedor(cnpj);
       response.status(200).json(fornecedor);    
   }
 
   //----------------------DELETAR FORNECEDOR-----------------------------
   async deletarFornecedor(request: Request, response: Response) {
     try {
-      const { id } = request.params;
+      const { cnpj } = request.params;
       const fornecedor = await FornecedorSchema.deleteOne({
-        nomeFornecedor: id
+        cnpj: cnpj
       });
       response.status(200).json({
         objeto: fornecedor,

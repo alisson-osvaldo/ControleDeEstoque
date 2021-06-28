@@ -1,0 +1,47 @@
+<mat-card>
+    <mat-card-title> Atualizar cadastrado de produto </mat-card-title>
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label for="nomeProduto">Nome do produto</mat-label>
+        <input
+          matInput
+          placeholder="Informe o nome do produto"
+          type="text"
+          nome="nomeProduto"
+          [(ngModel)]="nomeProduto"
+        />
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <mat-label> Unidade De Medida </mat-label>
+        <mat-select class="unidadeMed" [(ngModel)]="unidadeMed">
+          <mat-option value="UNIDADE"> UNIDADE </mat-option>
+          <mat-option value="CAIXA"> CAIXA </mat-option>
+          <mat-option value="PACOTE"> PACOTE </mat-option>
+        </mat-select>
+      </mat-form-field>
+  
+      <br />
+      <br />
+  
+      <mat-form-field>
+        <mat-label> Fornecedor </mat-label>
+        <mat-select [(ngModel)]="fornecedor">
+          <mat-option *ngFor="let forn of fornecedores" [value]="forn.cnpj"  >
+            {{ forn.cnpj }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+  
+      <br />
+  
+      <button mat-raised-button color="primary" (click)="cadastrar()">
+        Cadastrar
+      </button>
+      <br /><br />
+      <a mat-stroked-button color="warn" routerLink="/controle/listar/produto">
+        Produtos cadastrados
+      </a>
+    </mat-card-content>
+  </mat-card>
+  

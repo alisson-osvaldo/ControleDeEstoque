@@ -2,3 +2,15 @@ table{
     width: 100%;
     text-align: left;
 }
+
+.edit{
+    margin-right: 27px;
+}
+
+.edit > i{
+    color: #d9cd26
+}
+
+.delete > i{
+    color: #e35e6b;
+}

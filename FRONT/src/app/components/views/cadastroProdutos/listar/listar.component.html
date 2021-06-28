@@ -1,26 +1,48 @@
 <mat-card>
-    <mat-card-title>  Produtos Cadastrados </mat-card-title>
-    <table >
-        <thead>
-            <tr>
-                <th>Nome </th>
-                <th>Unidade Med.</th>
-                <th>Criado em</th>  
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <tr *ngFor= "let cadastrado of cadastros">
-                <td>
-                    {{ cadastrado.nomeProduto }}
-                </td>
-                <td>
-                    {{ cadastrado.unidadeMed}}
-                </td>
-                <td>
-                    {{ cadastrado.createdAt | date: "dd/MM/yyyy" }}
-                </td>         
-            </tr>
-        </tbody>    
-    </table>
+  <a mat-raised-button color="primary" routerLink="/cadastroProdutos/cadastrar">
+    <mat-icon>event</mat-icon>
+    Cadastrar Novo Produto
+  </a>
+
+  <br /><br />
+
+  <mat-card-title> Produtos Cadastrados </mat-card-title>
+  <table>
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Unidade Med.</th>
+        <th>Fornecedor</th>
+        <th>Criado em</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr></tr>
+      <tr *ngFor="let cadastrado of cadastros">
+        <td>
+          {{ cadastrado.nomeProduto }}
+        </td>
+        <td>
+          {{ cadastrado.unidadeMed }}
+        </td>
+        <td>
+          {{ cadastrado.fornecedor }}
+        </td>
+        <td>
+          {{ cadastrado.createdAt | date: "dd/MM/yyyy" }}
+        </td>
+        <td class="row">
+          <a
+            routerLink="/controle/alterar/produto/{{ cadastrado.nomeProduto }}"
+            class="edit" 
+          >
+            <i class="material-icons"> edit </i>
+          </a>
+          <a class="delete"  routerLink="/controle/produto/deletar/{{ cadastrado.nomeProduto }}" >
+            <i class="material-icons"> delete </i>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </mat-card>

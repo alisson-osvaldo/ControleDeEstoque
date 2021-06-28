@@ -7,8 +7,8 @@ const fornecedorSchema = new Schema(
       required: [true, "O campo NOME DO FORNECEDOR é obrigatório."],
     },
 
-    cnpjFornecedor: {
-      type: String,
+    cnpj: {
+      type: Number,
       required: [true, "O campo CNPJ é obrigatório!"],
     },
 

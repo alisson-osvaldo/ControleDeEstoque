@@ -9,11 +9,10 @@ const EntradaSchema = new Schema(
       required: [true, "O campo PRODUTO é obrigatório!"],
     },
 
-    /*produto: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref : 'produto',
-      require : true 
-    },*/
+    produto: {
+      type: mongoose.Schema.Types.String,
+      ref : 'produtos',
+    },
 
     quantidade: {
       type: Number,

@@ -23,11 +23,15 @@ import { CadastrarEntradaComponent } from './components/views/entrada/cadastrar-
 import { HeaderComponent } from './components/template/header/header.component';
 import { ContentComponent } from './components/template/content/content.component';
 import { FormsModule } from '@angular/forms';
-import { HomeComponent } from './components/views/home/home.component';
 import { BuscarComponent } from './components/views/cadastroProdutos/buscar/buscar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CadastrarFornecedorComponent } from './components/views/fornecedor/cadastrar-fornecedor/cadastrar-fornecedor.component';
 import { ListarFornecedorComponent } from './components/views/fornecedor/listar-fornecedor/listar-fornecedor.component';
+import { AtualizarProdutoComponent } from './components/views/cadastroProdutos/atualizar-produto/atualizar-produto.component';
+import { DeletarFornecedorComponent } from './components/views/fornecedor/deletar-fornecedor/deletar-fornecedor.component';
+import { DeletarCadastroComponent } from './components/views/cadastroProdutos/deletar-cadastro/deletar-cadastro.component';
+import { DeletarEntradaComponent } from './components/views/entrada/deletar-entrada/deletar-entrada.component';
+import { FooterComponent } from './components/template/footer/footer.component';
 
 
 
@@ -41,10 +45,14 @@ import { ListarFornecedorComponent } from './components/views/fornecedor/listar-
     ContentComponent,
     ListarEntradaComponent,
     CadastrarEntradaComponent,
-    HomeComponent,
     BuscarComponent,
     CadastrarFornecedorComponent,
-    ListarFornecedorComponent
+    ListarFornecedorComponent,
+    AtualizarProdutoComponent,
+    DeletarFornecedorComponent,
+    DeletarCadastroComponent,
+    DeletarEntradaComponent,
+    FooterComponent
     
     
   ],

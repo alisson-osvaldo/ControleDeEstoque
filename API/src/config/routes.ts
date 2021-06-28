@@ -21,7 +21,7 @@ router.get("/controle/listar/produto", cadastrocontroller.listarProduto);
 router.get("/controle/produto/buscar/:nomeProduto", cadastrocontroller.buscarProduto);
 
 //deletar cadastro produto
-router.delete("/controle/produto/deletar/:id", cadastrocontroller.deletarProduto);
+router.delete("/controle/produto/deletar/:nomeProduto", cadastrocontroller.deletarProduto);
 
 //total de cadastros de produtos
 router.get("/controle/total/cadastros", cadastrocontroller.cadastrosTotal);
@@ -39,10 +39,10 @@ router.post("/controle/cadastrar/fornecedor", fornecedorcontroller.cadastrarForn
 router.get("/controle/listar/fornecedor", fornecedorcontroller.listarFornecedor);
 
 //buscar fornecedor pelo NOME
-router.get("/controle/fornecedor/:nomeFornecedor", fornecedorcontroller.buscarFornecedor);
+router.get("/controle/fornecedor/:cnpj", fornecedorcontroller.buscarFornecedor);
 
 //deletar fornecedor
-router.delete("/controle/fornecedor/deletar/:id", fornecedorcontroller.deletarFornecedor);
+router.delete("/controle/fornecedor/deletar/:cnpj", fornecedorcontroller.deletarFornecedor);
 
 //alterar fornecedor
 router.put("/controle/alterar/fornecedor/:id", fornecedorcontroller.alterarFornecedor);
@@ -57,7 +57,7 @@ router.post("/controle/cadastrar/entrada", entradacontroller.cadastrarEntrada);
 router.get("/controle/listar/entrada", entradacontroller.listarEntrada);
 
 //Deletar produto do estoque
-router.delete("/controle/deletar/estoque/:id", entradacontroller.deletarEstoque);
+router.delete("/controle/deletar/estoque/:nomeProduto", entradacontroller.deletarEstoque);
 
 //total de produtos em estoque
 router.get("/controler/total/estoque", entradacontroller.produtosTotal);

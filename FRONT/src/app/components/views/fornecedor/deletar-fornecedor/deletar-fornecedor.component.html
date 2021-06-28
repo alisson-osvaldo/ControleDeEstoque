@@ -1,0 +1,14 @@
+<mat-card>
+    <mat-card-title> Deletar Fornecedor </mat-card-title>
+    <mat-card-content>
+      
+      <mat-form-field >
+        <mat-label for="cnpj">CNPJ Do Fornecedor</mat-label>
+        <input matInput placeholder="Informe o cnpj do Fornecedor" type="number" name="cnpj" [(ngModel)]="cnpj"/>
+      </mat-form-field>
+      <mat-card-actions>
+        <button mat-raised-button color="warn" (click)="deletar(cnpj)">Deletar</button>
+        <a mat-stroked-button routerLink="/controle/listar/fornecedor"> Listar </a>
+      </mat-card-actions>
+    </mat-card-content>
+  </mat-card>

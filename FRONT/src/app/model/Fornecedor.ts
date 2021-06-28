@@ -3,7 +3,7 @@ export class Fornecedor {
     createdAt? : Date;
     updatedAt? : Date;
    nomeFornecedor! : String;
-   cnpjFornecedor!: String;
+   cnpj!: Number;
    telFornecedor!: String;
    emailFornecedor!: String;
 }

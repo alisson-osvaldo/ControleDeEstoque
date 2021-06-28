@@ -1,31 +1,35 @@
 <mat-card>
-    <mat-card-title>  Fornecedores Cadastrados </mat-card-title>
-    <table >
-        <thead>
-            <tr>
-                <th>Nome </th>
-                <th>CNPJ</th>
-                <th>Telefone</th>  
-                <th>E-mail</th>  
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <tr *ngFor= "let cadastrado of fornecedores">
-                    
-                <td>
-                    {{ cadastrado.nomeFornecedor }}
-                </td>
-                <td>
-                    {{ cadastrado.cnpjFornecedor}}
-                </td>
-                <td>
-                    {{cadastrado.telFornecedor}}
-                </td>
-                <td>
-                    {{cadastrado.emailFornecedor}}
-                </td>      
-            </tr>
-        </tbody>    
-    </table>
+  <mat-card-title> Fornecedores Cadastrados </mat-card-title>
+  <table>
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>CNPJ</th>
+        <th>Telefone</th>
+        <th>E-mail</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr></tr>
+      <tr *ngFor="let cadastrado of fornecedores">
+        <td>
+          {{ cadastrado.nomeFornecedor }}
+        </td>
+        <td>
+          {{ cadastrado.cnpj }}
+        </td>
+        <td>
+          {{ cadastrado.telFornecedor }}
+        </td>
+        <td>
+          {{ cadastrado.emailFornecedor }}
+        </td>
+          <td class="row">
+            <a class="delete"  routerLink="/controle/fornecedor/deletar/{{ cadastrado.  cnpj }}" >
+              <i class="material-icons"> delete </i>
+            </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </mat-card>

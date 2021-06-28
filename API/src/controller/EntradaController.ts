@@ -18,7 +18,7 @@ async function buscarProduto(nomeProduto: string) {
 
 class EntradaController {
   //-----------------ENTRADA PRODUTO----------------------
-  //Validação: só da entrada no produto caso o produto 
+  //Validação: só da entrada no produto caso o produto já esteje cadastrado
   async cadastrarEntrada(request: Request, response: Response) {
     const nomeProduto = request.body.nomeProduto;
     const produtoEncontrado = await buscarProduto(nomeProduto);
@@ -60,9 +60,9 @@ class EntradaController {
   //------------------SAIDA DE PRODUTOS---------------------
   async deletarEstoque(request: Request, response: Response) {
     try {
-      const { id } = request.params;
+      const { nomeProduto } = request.params;
       const produto = await EntradaSchema.deleteOne({
-        nomeProduto: id,
+        nomeProduto: nomeProduto,
       });
 
       response

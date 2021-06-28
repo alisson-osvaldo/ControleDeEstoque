@@ -6,17 +6,9 @@ POST  http://localhost:3000/controle/cadastrar/produto
 Content-Type: application/json
 
 {
-     "data": "2021/04/12",
-    "nomeProduto": "maquinasdf",
-    "unidadeMed" : "CAIXA",
-   "fornecedores" : [
-     {
-        "nomeFornecedor": "jack",
-        "cnpjFornecedor": "1234",
-        "telFornecedor": "707070",
-        "emailFornecedor": "@test.com"
-     }
-   ]
+    "cnpj" : 123,
+    "nomeProduto": "teclado4",
+    "unidadeMed" : "CAIXA"
 }
 
 ###
@@ -26,12 +18,12 @@ GET  http://localhost:3000/controle/listar/produto
 
 ###
   //-------------------BUSCAR CADASTRO PRODUTO (NOME)------------------
-GET  http://localhost:3000/controle/produto/buscar/telcado
+GET  http://localhost:3000/controle/produto/buscar/teclado2
 
 
 ###
 //-------------------DELETAR CADASTRO DE PRODUTO--------------------------
-DELETE  http://localhost:3000/controle/produto/deletar/telcado
+DELETE  http://localhost:3000/controle/produto/deletar/radio123
 
 
 ###
@@ -41,10 +33,10 @@ GET  http://localhost:3000/controle/total/cadastros
 
 ###
   //-------------------ALTERAR CADASTRO PRODUTO-----------------------------(TESTAR PELO POSTMAN)
-  PUT  http://localhost:3000/controle/alterar/produto/60901b34525b312cc89cf286
+  PUT  http://localhost:3000/controle/alterar/produto/60d8de15d41a773d68c1d651
   
 {
-     "nomeProduto" : "Radio",
+     "nomeProduto" : "Radio111",
      "unidadeMed" : "CAIXA",
      "quantidade" : "5"
 }
@@ -57,7 +49,7 @@ Content-Type: application/
 
 {
     "nomeFornecedor" : "pedro",
-    "cnpjFornecedor" : "123",
+    "cnpjFornecedor" : 123,
     "telFornecedor" : "99707070",
     "emailFornecedor" : "teste@.com"
 }
@@ -71,12 +63,12 @@ Content-Type: application/
 
 ###
 //--------------------BUSCAR FORNECEDOR----------------------------
-GET  http://localhost:3000/controle/fornecedor/jow1
+GET http://localhost:3000/controle/fornecedor/123
 
 
 ###
   //----------------------DELETAR FORNECEDOR-----------------------------
-DELETE http://localhost:3000/controle/fornecedor/deletar/pedro
+DELETE http://localhost:3000/controle/fornecedor/deletar/322
 
 
 ###
@@ -97,7 +89,7 @@ POST http://localhost:3000/controle/cadastrar/entrada
 Content-Type: application/json
 
 {
-    "produto": "tv",
+    "nomeProduto": "radio",
     "quantidade": 2,
     "valor": 10,
     "lote": 1234
@@ -111,7 +103,7 @@ GET http://localhost:3000/controle/listar/entrada
 
 ###
  //------------------SAIDA DE PRODUTOS---------------------
- DELETE http://localhost:3000/controle/deletar/estoque/telcado
+ DELETE http://localhost:3000/controle/deletar/estoque/radio
 
 
 

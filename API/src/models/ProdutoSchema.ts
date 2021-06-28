@@ -3,9 +3,11 @@ import {fornecedorSchema} from "../models/FornecedorSchema";
 
 const produtoSchema = new Schema(
   {
-    data:{
-      type: Date,
-      required: [true, "O campo Data é obrigatório!"],
+    
+    fornecedor:{
+      type: Schema.Types.Number,
+      ref: "fornecedores",
+      //required: [true, "O campo Fornecedor é obrigatório!"],
     },
     
     nomeProduto: {
@@ -19,7 +21,7 @@ const produtoSchema = new Schema(
       enum: ["UNIDADE", "CAIXA", "PACOTE"],
     },
     
-    fornecedores : [fornecedorSchema]
+   // fornecedores : [fornecedorSchema]
     
   },
     
